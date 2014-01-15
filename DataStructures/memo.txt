@@ -1,0 +1,36 @@
+/*
+cellは構造体タグ(省略可)
+構造体のなかの要素は,メンバという。
+ここでは変数を定義しているわけではない。(詳しくはP295,296)
+
+
+命名規則に拘る必要はないけど,_tがついてるやつはtypedef宣言されていると考えていい
+*/
+
+
+/*
+struct cell {
+    int *item;
+    int *next;
+}
+基本的には↑のように定義
+
+sturct cell queue;
+
+のように呼び出す。
+でも毎回struct cellとするのはしんどい...
+typedefで定義してcell_t(構造体変数)で呼び出せるようにすると...
+
+typedef struct cell cell_t;
+
+cell_t queue;
+
+でOK!!
+どうせなら構造体テンプレートの定義でまとめて書いちゃおう
+
+typedef struct cell {
+    int *item;
+    int *next;
+};
+
+*/

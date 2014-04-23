@@ -1,0 +1,19 @@
+1-1 CCの一時ファイル(アセンブリコード)を出力するオプションを調べる。
+    intel形式とatt形式で出力する２つのオプションが有る
+
+	$ gcc test236.c -masm=intel -S
+	$ gcc test236.c -masm=att -S
+
+	参考) http://www.cqpub.co.jp/interface/column/freesoft/2005/200504/0.htm
+
+1-2 P4のfoo()関数のプログラムをそのオプションで結果を見る
+    intel形式とatt形式の両方
+
+mail : miura@mail.kobe-u.ac.jp
+
+```
+int foo(int x){
+	int y = x*x;
+	return y+2;
+}
+```
